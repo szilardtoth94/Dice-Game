@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dice game</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+              crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+              crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+                crossorigin="anonymous"></script>
+        <link href="style/style.css" 
+              rel="stylesheet">
+        
+         <script src="https://use.fontawesome.com/74f578ebde.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1><b>Dice game</b></h1>
+            <div class="container  userinfo center-text" id="userinfo">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 ">
+                        <input type="text" 
+                               id="firstUserName" 
+                               placeholder="First player name">
+                         <div class="radio">
+                            <label>
+                                <input type="radio" 
+                                       name="optionsRadios" 
+                                       id="first-player-male"
+                                       value="option1" checked>
+                               MALE
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" 
+                                       name="optionsRadios" 
+                                       id="first-player-female" 
+                                       value="option2">
+                                FEMALE
+                            </label>
+                        </div>
+                    </div>
+                    <div class="class= col-xs-6 col-xs-offset-3  col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 center-text">
+                        <input type="text" 
+                               id="secondUserName" 
+                               placeholder="Second player name">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" 
+                                       name="optionsRadios2" 
+                                       id="second-player-male" 
+                                       value="option11" checked>
+                               MALE
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" 
+                                       name="optionsRadios2" 
+                                       id="second-player-female" 
+                                       value="option22">
+                                FEMALE
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <nav>
+            <div class="container game-menu text-center">
+                <div class="row">
+                    <div class=" col-md-2 col-md-offset-3">
+                       <button type="button" 
+                               id="start"
+                               class="btn btn-primary active" >
+                           Start Game
+                        </button>
+                    </div>
+                     <div class="col-md-2  ">
+                      <button type="button" 
+                               id="restart"
+                              class="btn btn-primary">
+                          Restart Game
+                         </button>
+                        
+                    </div>
+                    <div class=" col-md-2 ">
+                      <button type="button" 
+                               id="changePlayer"
+                              class="btn btn-primary ">
+                          Change players
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="game disabled">
+            <div class="container  game-container ">
+                 <div class="row text-center">
+                    <div class="col-md-4" id ="first">
+                        <h3>Score</h3>
+                        <p id="fisrtScore">0</p>
+                        <br>
+                        <h3>Actual Score</h3>
+                        <p id="fisrtActualScore">0</p>
+                        <br>
+                        <img class="profileimage" 
+                             id="profileimage1"
+                             src=assests/img/businessman.svg 
+                             alt="Profile">
+                        <br>
+                            <img  class= "stateimg"
+                                src=assests/img/winner.jpg 
+                                id="stateimage1"
+                                alt="state" >
+                        <H1 id="username1">........</H1>
+                    </div>
+                     
+                    <div class="col-md-4 dice-menu"  >
+                        <H3>Actual Player:</H3>
+                        <h4 id="actual-player-name"> ........ </h4>
+                        <br>
+                        <img class="profileimage" 
+                             src="assests/img/dice.gif" 
+                             id= "diceimg"
+                             alt="Dice">
+                         <div class=" text-center">
+                             <button type="button" 
+                                     id= "nextOne"
+                                     class="btn btn-primary"> 
+                                               Rolling the dice
+                            </button>
+                            <button type="button"
+                                    id ="stop"
+                                    class="btn btn-primary"> 
+                                               Want to Stop
+                            </button>
+                        </div>
+                    </div>
+                     
+                    <div class="col-md-4" id="second">
+                        <h3>Score</h3>
+                        <p id="secondScore">0</p>
+                        <br>
+                        <h3>Actual Score</h3>
+                        <p id="secondActualScore">0</p>
+                        <br>
+                        <img  class="profileimage" 
+                              id="profileimage2"
+                             src=assests/img/businessman.svg 
+                             alt="Profile">
+                        <br>
+                         <img  class= "stateimg"
+                            src=assests/img/loser.jpg 
+                            id="stateimage2"
+                            alt="state">
+                        <H1 id="username2">........</H1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "container description">
+        <p> Jocul va avea doi jucători; </p>
+        <p>  Jocul va începe cu Jucătorul 1;</p> 
+        <p>Jocul se va juca pe runde.Jucătorul curent are dreptul să arunce zarul de câte ori doreşte, însă în momentul în care zarul aruncat indică cifra 1, jucătorul îşi va pierde runda. 
+            Fiecare aruncare va fi contorizată într-o variabilă “SCOR DE RUNDĂ”, asociată jucătorului curent. În cazul în care zarul indică 1, scorul de rundă va fi resetat la 0, iar runda jucătorului curent se va încheia, urmând celălalt jucător; Jucătorul curent va avea şi posibilitatea de a “TERMINA RUNDA”, moment în care scorul său de rundă se va aduna variabilei “SCOR GLOBAL JUCĂTOR”, iar runda jucătorului curent se va încheia, urmând celălalt jucător.</p>
+        <p>Primul jucător care va ajunge la 100 de puncte va câştiga jocul.</p>
+        </div>
+       <footer>
+           <small> Copyright &copy;  2017, <a href ="https://www.facebook.com/szilard.toth.94" ><strong>Szilard Toth</strong> </a>, Cluj-Napoca ,<a href="http://academy.arobs.com/javascript-internship/"> <strong>Arobs</strong></a></small>  
+        </footer>
+        
+        <script src ="funtions/model/player.js"></script>
+        <script src ="funtions/auth.js"></script>
+         <script src="funtions/init.js"></script>
+        <script src="funtions/app.js"></script>
+    </body>
+</html>

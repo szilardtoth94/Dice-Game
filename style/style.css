@@ -1,0 +1,77 @@
+body {
+    background-image:url("https://static.turbosquid.com/Preview/2014/07/08__04_47_05/dice%204.jpgce9763de-2346-493c-8d61-07d196cf52c3Original.jpg");
+    background-size:cover;
+}
+
+.userinfo{
+    padding-top: 15px;
+    margin-top: 15px;
+    background-color: RGBA(181,181,181,0.74);
+    
+}
+
+h3{
+    display: inline-block;
+}
+header h1 {
+    text-align: center;
+    margin: 10px;
+}
+.game-menu {
+    background-color: RGBA(181,181,181,0.74);
+    margin-top: 20px;
+}
+
+.game-menu button{
+    margin: 5px;
+    width: 120px;
+}
+
+.game-container{
+   background-color: RGBA(181,181,181,0.74);; 
+    margin-top: 20px;
+    margin-bottom: 30px
+}
+
+.profileimage{
+    max-width:200px;
+}
+
+.game-container p{
+    display: inline-block;
+    min-width: 50px;
+    height: 20px;
+    background-color: white;
+}
+
+.stateimg {
+   
+   width:150px;
+    height:100px;
+    display: none;
+    margin :15px;
+}
+#diceimg {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.description {
+    font-size: 16px;
+    background-color:RGBA(181,181,181,0.84); 
+    margin-bottom: 30px;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    background-color: RGBA(181,181,181,0.74);
+}
+
+footer small {
+    display: block;
+    text-align: center;
+}
