@@ -10,7 +10,7 @@ document.getElementById("start").addEventListener("click",function (){
     }
     else if(!document.getElementById("secondUserName").value){
         var robotList = ['KITT','Mega Man','Johnny 5','Optimus Prime','R2D2','Wall-E'];
-        username ="(robot)"+ robotList[parseInt(Math.floor((Math.random() * 6) + 1))];
+        username ="(robot)"+ robotList[parseInt(Math.floor((Math.random() * 5) + 1))];
         document.getElementById("username2").innerHTML =  username;
         playerList[1].name=username;
         robot=1;
